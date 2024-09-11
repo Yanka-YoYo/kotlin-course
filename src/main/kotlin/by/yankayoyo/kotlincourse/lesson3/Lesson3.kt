@@ -4,7 +4,7 @@ val name: String  ="Alice" // val (неизменное значение); name 
 
 var age: Int = 30 // var (изменяемое значение); : (отделение); age (название); Int (мак, мин,  значения цифры целочисленные); = (присваиваем); 30 (значение)
 
-const val PI:  = 3.14
+const val PI:  = 3.14 // const
 
 lateinit var userInfo: String
 
