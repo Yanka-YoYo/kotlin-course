@@ -4,26 +4,30 @@ val name: String  ="Alice" // val (неизменное значение); name 
 
 var age: Int = 30 // var (изменяемое значение); : (отделение); age (название); Int (мак, мин,  значения цифры целочисленные); = (присваиваем); 30 (значение)
 
-const val PI:  = 3.14 // const
+const val PI:  = 3.14 // const val (значение известное на начало написания) используем для описания глобального и простого
 
-lateinit var userInfo: String
+lateinit var userInfo: String // lateinit var (обязательно с var инициализируется позже)
 
-val LazyValue: String by Lazy {
-
+val lazyValue: String by Lazy { // lazyValue (инициализируется только после прямого обращения к ней)
+"Hello, this is a lazy string"
 }
 
-var speed: Double? = null
+var speed: Double? = null // Double? (? означает что переменная может быть null) (null это ничто, не имение сущесственного объекта)
 
 val count: Int = 0
-    get() = field
+    get() = field // get получить set установить; field содержимое переменной count
     set(value) {
         if (value >= 0) field = value
-        else field - 100
+        else field = 100
     }
+
+fun countUp () {
+    count = -1
+}
 
 val chassis: String = "12345abc"
 
-var colour: String = "Blue"
+var color: String = "Blue"
 
 var distance: Double = 0.0
 
