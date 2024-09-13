@@ -1,20 +1,12 @@
 package by.yankayoyo.kotlincourse.lesson3
 
-import java.time.LocalDate
-import kotlin.time.Duration
-import kotlin.time.Duration.Companion.hours
+val eventName : String = "Hackathon Survival"// Название мероприятия
 
-// Погрузимся в атмосферу "Hackathon Survival": Марафон, где участники пытаются завершить реальный проект в условиях искусственно созданного хаоса (например, часто меняющиеся требования, неожиданные "сбои" в оборудовании)
-// Для каждого из полей подбери наилучший способ хранения из известных тебе. Учитывай такие факторы, как изменяемость, обязательность, возможность начальной установки, ресурсоёмкие вычисления значения,
-// необходимость проверки устанавливаемого значения на валидность или запрет доступа на установку при возможности чтения, публичность и приватность данных.
-
-val eventName : String = "Hackaton Survival"// Название мероприятия
-
-val eventDate: LocalDate = ("2024-09-13")// Дата проведения
+var eventDate: String = "2024-09-13" // Дата проведения
 
 val eventLocation : String = "Minsk , Belarus"// Место проведения
 
-private var eventBudget : Map<String,Double> = mapOf(
+private val eventBudget : Map<String,Double> = mapOf(
     "Budget 1" to 5000.0,
     "Budget 2" to 2000.0,
     "Budget 3" to 1000.0,
