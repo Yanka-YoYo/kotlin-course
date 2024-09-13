@@ -13,9 +13,11 @@ private val eventBudget : Map<String,Double> = mapOf(
     "Budget 4" to 500.0
 ) // Подробный бюджет мероприятия, включая расходы на оборудование, кейтеринг и другие операционные расходы.
 
-lateinit var participantCount: Int // Количество участников
+var participantCount: Int = 0
+    get() = field
+    private set(value) {field=value}// Количество участников
 
-val eventDuration: Duration = 5.hours // Длительность хакатона
+val eventDuration: Long = 8*60*60 // Длительность хакатона
 
 private val supplierContacts: Map<String,String> = mapOf(
     "Supplier 1" to supplier1@gmail.com,
@@ -29,23 +31,23 @@ val eventSponsors : List<String> = listOf ("Campany A", "Cpmpany B", "Company C"
 
 var totalBudget : Double = 8500.0// Бюджет мероприятия
 
-var eventInternetLevel : String = "High"// Текущий уровень доступа к интернету
+var internetAccessLevel : Int = 0// Текущий уровень доступа к интернету
 
-lateinit var eventResourcesAllocation : Map<String,String>// Информация о транспортировке оборудования, распределении ресурсов и координации между различными командами поддержки.
+private var eventResourcesAllocation : Map<String,String>// Информация о транспортировке оборудования, распределении ресурсов и координации между различными командами поддержки.
 
-val eventTeams : Int = 5// Количество команд
+val eventTeams : Int = 0 // Количество команд
 
 val eventTasks : List<String> = listOf("Task 1", "Task 2", "Task 3") // Перечень задач
 
 val eventEvacuationPlan : String = "" // План эвакуации
 
-val availableEquipment : Map<String,Double> = mapOf(
+var availableEquipment : Map<String,Double> = mapOf(
     "Tables" to 10,
     "Chairs" to 50,
     "Laptops" to 25
 )// Список доступного оборудования
 
-val freeEquipment : Int = 95
+var freeEquipment : Int = 95
     get() = field
     set(value) {
         if (value > 0) field -=value
@@ -95,7 +97,7 @@ var freeRestingPlaces : Int = 25
 
 val pressPlan : String = "Press releases and interviews"// План взаимодействия с прессой
 
-var teamProjects : Map<String, String> = mapOf(
+val teamProjects : Map<String, String> = mapOf(
     "Team 1" to "",
     "Team 2" to "",
     "Team 3" to "",
@@ -120,11 +122,11 @@ val emergencyContacts: Map<String, String> = mapOf(
 
 val specialConditions: String = "Wheelchair accessible venue" // Особые условия для участников с ограниченными возможностями
 
-var participantMood: String = "Positive" // Общее настроение участников (определяется опросами)
+val participantMood: String by lazy { '' } // Общее настроение участников (определяется опросами)
 
-var hackathonPlan: String = ""// Подробный план хакатона, включающий время и содержание каждого сегмента, инициализируется непосредственно перед началом мероприятия.
+lateinit var hackathonPlan: String = "" // Подробный план хакатона, включающий время и содержание каждого сегмента, инициализируется непосредственно перед началом мероприятия.
 
-var specialGuestName: String = "Special Guest"// Имя знаменитого специального гостя, которое будет объявлено за день до мероприятия.
+lsteinit var specialGuestName: String = "Special Guest" // Имя знаменитого специального гостя, которое будет объявлено за день до мероприятия.
 
 val maxCapacity: Int = 250// Максимальное количество людей, которое может вместить место проведения.
 
