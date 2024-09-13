@@ -20,7 +20,7 @@ val string: MutableList<String> = mutableListOf("one", "two", "three")
 val doubles: Set<Double> = setOf(23.3, 25.5)
 
 val keysToValues: Map<String, String> = mapOf(
-    "Key 1" to "Enything 1"
+    "Key 1" to "Enything 1",
     "Key 2" to "Enything 2"
 )
 
