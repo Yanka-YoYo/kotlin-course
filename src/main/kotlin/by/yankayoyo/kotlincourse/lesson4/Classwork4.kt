@@ -7,7 +7,7 @@ val myShort: Short = 327
 val myByte: Byte = 127
 val myDouble: Double = 1.9999
 
-val isKotlinFun: Boolean =true
+val isKotlinFun: Boolean = true
 
 val letter: Char = '1'
 

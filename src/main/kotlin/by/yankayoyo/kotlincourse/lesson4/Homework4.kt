@@ -1,81 +1,81 @@
 package by.yankayoyo.kotlincourse.lesson4
 
-// 42
+val myInt: Int = 42
 
-// 98765432123456789L
+val myLong: Long = 98765432123456789L
 
-// 23.45f
+val myFloat: Float = 23.45f
 
-// 0.123456789
+val myDouble: Double = 0.123456789
 
-// "Kotlin & Java"
+val myString: String = "Kotlin & Java"
 
-// false
+val isKotlinFan: Boolean = false
 
-// 'c'
+val myChar: Char = 'c'
 
-// 500
+val myInt: Int = 500
 
-// 4294967296L
+val myLong: Long = 4294967296L
 
-// 18.0f
+val muFloat: Float = 18.0f
 
-// -0.001
+val myDouble: Double = -0.001
 
-// "OpenAI"
+val myString: String = "OpenAI"
 
-// “true”
+val myString: String = “true”
 
-// '9'
+val myChar: Char = '9'
 
-// 2048
+val myInt Int = 2048
 
-// 10000000000L
+val myLong: Long = 10000000000L
 
-// 5.75f
+val myFloat: Float = 5.75f
 
-// 1.414
+val myDouble: Double = 1.414
 
-//"Artificial Intelligence"
+val myString: String = "Artificial Intelligence"
 
-// false
+val isKotlinFun: Boolean = false
 
-// '@'
+val myChar: Char = '@'
 
-// 1024
+val myInt: Int = 1024
 
-// 1234567890123L
+val myLong: Long = 1234567890123L
 
-// 10.01f
+val myFloat: Float = 10.01f
 
-// -273.15
+val myDouble: Double = -273.15
 
-// "SpaceX"
+val myString: String = "SpaceX"
 
-// true
+val isKotlinFun: Boolean = true
 
-// “🤯”
+val mySymbols: Symbols = “🤯”
 
-// ‘65535’
+val myChar: Char = ‘65535’
 
-// 72057594037927935L
+val myLong: Long = 72057594037927935L
 
-// 2.71828f
+val myFloat: Float = 2.71828f
 
-// 101.0101
+val my Double: Double = 101.0101
 
-// "Quantum Computing"
+val myString: String = "Quantum Computing"
 
-// false
+val isKotlinFun: Boolean = false
 
- // 'x'
+val myChar: Char = 'x'
 
-// 314
+val myInt: Int = 314
 
-// 123456789123456789L
+val myLong: Long = 123456789123456789L
 
-// 6.626f
+val myFloat: Float = 6.626f
 
-// 0.007
+val myDouble: Double = 0.007
 
-// "Android Studio"
+val myString: String = "Android Studio"
