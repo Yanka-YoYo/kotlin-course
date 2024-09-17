@@ -24,7 +24,7 @@ val myDouble: Double = -0.001
 
 val myString: String = "OpenAI"
 
-val myString: String = “true”
+val myString: String = “true” // ошибка нельзя использовать
 
 val myChar: Char = '9'
 
@@ -54,9 +54,9 @@ val myString: String = "SpaceX"
 
 val isKotlinFun: Boolean = true
 
-val mySymbols: Symbols = “🤯”
+val mySymbols: String = “🤯”
 
-val myChar: Char = ‘65535’
+val myChar: String = ‘65535’ нельзя использовать в коде
 
 val myLong: Long = 72057594037927935L
 
