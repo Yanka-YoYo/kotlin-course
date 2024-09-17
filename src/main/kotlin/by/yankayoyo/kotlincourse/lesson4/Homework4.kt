@@ -79,3 +79,4 @@ val myFloat: Float = 6.626f
 val myDouble: Double = 0.007
 
 val myString: String = "Android Studio"
+
