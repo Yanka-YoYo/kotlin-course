@@ -4,7 +4,7 @@ fun main () {
     val sum = 10 + 5
     val diff = 10 - 5
     val product = 10 * 5
-    val remainder = 2 % 2
+    val remainder = 5 % 2
     val isEqual = 5 == 5
     val isNotEqual = 5 != 5
     val isGreater = 5 > 3
