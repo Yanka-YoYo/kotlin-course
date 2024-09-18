@@ -1,70 +1,70 @@
 package by.yankayoyo.kotlincourse.lesson4
 
-val myInt: Int = 42
+val one: Int = 42
 
-val myLong: Long = 98765432123456789L
+val two: Long = 98765432123456789L
 
-val myFloat: Float = 23.45f
+val three: Float = 23.45f
 
-val myDouble: Double = 0.123456789
+val four: Double = 0.123456789
 
-val myString: String = "Kotlin & Java"
+val five: String = "Kotlin & Java"
 
 val isKotlinFan: Boolean = false
 
-val myChar: Char = 'c'
+val six: Char = 'c'
 
-val myInt: Int = 500
+val seven: Int = 500
 
-val myLong: Long = 4294967296L
+val eight: Long = 4294967296L
 
-val muFloat: Float = 18.0f
+val nine: Float = 18.0f
 
-val myDouble: Double = -0.001
+val ten: Double = -0.001
 
-val myString: String = "OpenAI"
+val eleven: String = "OpenAI"
 
-val myString: String = “true” // ошибка нельзя использовать
+val myString: String = "true"
 
-val myChar: Char = '9'
+val tvelwe: Char = '9'
 
-val myInt Int = 2048
+val threaten: Int = 2048
 
-val myLong: Long = 10000000000L
+val fourteen: Long = 10000000000L
 
-val myFloat: Float = 5.75f
+val fiveteen: Float = 5.75f
 
-val myDouble: Double = 1.414
+val sixteen: Double = 1.414
 
-val myString: String = "Artificial Intelligence"
+val seventeen: String = "Artificial Intelligence"
 
-val isKotlinFun: Boolean = false
+val eighteen: Boolean = false
 
-val myChar: Char = '@'
+val nineteen: Char = '@'
 
-val myInt: Int = 1024
+val twenty: Int = 1024
 
-val myLong: Long = 1234567890123L
+val twentyOne: Long = 1234567890123L
 
-val myFloat: Float = 10.01f
+val twentyTwo: Float = 10.01f
 
-val myDouble: Double = -273.15
+val twentyThree: Double = -273.15
 
-val myString: String = "SpaceX"
+val twentyFour: String = "SpaceX"
 
-val isKotlinFun: Boolean = true
+val tventyFive: Boolean = true
 
-val mySymbols: String = “🤯”
+val mySymbols: String = "🤯"
 
-val myChar: String = ‘65535’ нельзя использовать в коде
+val twentySix: String = "65535"
 
-val myLong: Long = 72057594037927935L
+val twentySeven: Long = 72057594037927935L
 
-val myFloat: Float = 2.71828f
+val twentyEight: Float = 2.71828f
 
-val my Double: Double = 101.0101
+val twentyNine: Double = 101.0101
 
-val myString: String = "Quantum Computing"
+val threty: String = "Quantum Computing"
 
 val isKotlinFun: Boolean = false
 
@@ -78,5 +78,5 @@ val myFloat: Float = 6.626f
 
 val myDouble: Double = 0.007
 
-val myString: String = "Android Studio"
+val thretyOne: String = "Android Studio"
 

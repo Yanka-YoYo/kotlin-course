@@ -19,8 +19,7 @@ var participantCount: Int = 0
 
 val eventDuration: Long = 8 * 60 * 60 // Длительность хакатона
 
-private val supplierContacts: List<String> = listOf("Supplier 3", "Supplier 2")
-) // Контактная информация и условия соглашений с поставщиками пищи, оборудования и других услуг.
+private val supplierContacts: List<String> = listOf("Supplier 3", "Supplier 2") // Контактная информация и условия соглашений с поставщиками пищи, оборудования и других услуг.
 
 var eventStatus : String = "Preparation"// Текущее состояние хакатона (статус)
 

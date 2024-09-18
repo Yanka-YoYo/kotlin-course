@@ -1,13 +1,13 @@
 package by.yankayoyo.kotlincourse.lesson4
 
 val muInt: Int = 0
-val myFloat: Float = 0.0F
-val myLong: Long = 1_234_567
+val myOne: Float = 0.0F
+val myTwo: Long = 1_234_567
 val myShort: Short = 327
 val myByte: Byte = 127
-val myDouble: Double = 1.9999
+val myThree: Double = 1.9999
 
-val isKotlinFun: Boolean = true
+val isKotlin: Boolean = true
 
 val letter: Char = '1'
 
