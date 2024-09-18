@@ -12,7 +12,7 @@ package by.yankayoyo.kotlincourse.lesson5
     val isGreaterOrEqual = 5 >= 5
     val isLesserOrEqual = 5 <= 3
     val andResult = false && false //все должны быть тру или фолс
-    val orResult = true || true //хотябы один тру что бы тру
+    val orResult = true || false //хотябы один тру что бы тру
     val notResult = !(5 > 3)
     var number = 5
     //number += 3
