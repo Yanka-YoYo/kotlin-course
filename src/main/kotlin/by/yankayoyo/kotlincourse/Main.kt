@@ -21,6 +21,11 @@ fun main () {
 
 
 
-    println(remainder)
+    println()
+
+    var name: String? = null
+
+val result = name ?: "Unknown"
+
 }
 
