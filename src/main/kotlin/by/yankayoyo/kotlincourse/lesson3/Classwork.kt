@@ -8,7 +8,7 @@ const val PI = 3.14 // const val (значение известное на на�
 
 lateinit var userInfo: String // lateinit var (обязательно с var инициализируется позже)
 
-val lazyValue: String by Lazy { // lazyValue (инициализируется только после прямого обращения к ней)
+val lazyValue: String by lazy { // lazyValue (инициализируется только после прямого обращения к ней)
 "Hello, this is a lazy string"
 }
 
@@ -35,7 +35,7 @@ lateinit var owner: String
 
 const val WHEELS: Int = 4
 
-val report: String by Lazy {
+val report: String by lazy {
     ""
 }
 

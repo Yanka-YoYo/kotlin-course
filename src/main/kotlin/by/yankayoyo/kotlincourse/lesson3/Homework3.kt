@@ -17,12 +17,9 @@ var participantCount: Int = 0
     get() = field
     private set(value) {field=value}// Количество участников
 
-val eventDuration: Long = 8*60*60 // Длительность хакатона
+val eventDuration: Long = 8 * 60 * 60 // Длительность хакатона
 
-private val supplierContacts: Map<String,String> = mapOf(
-    "Supplier 1" to supplier1@gmail.com,
-    "Supplier 2" to supplier2@gmail.com,
-    "Supplier 3" to supplier3@gmail.com
+private val supplierContacts: List<String> = listOf("Supplier 3", "Supplier 2")
 ) // Контактная информация и условия соглашений с поставщиками пищи, оборудования и других услуг.
 
 var eventStatus : String = "Preparation"// Текущее состояние хакатона (статус)
@@ -33,7 +30,7 @@ var totalBudget : Double = 8500.0// Бюджет мероприятия
 
 var internetAccessLevel : Int = 0// Текущий уровень доступа к интернету
 
-private var eventResourcesAllocation : Map<String,String>// Информация о транспортировке оборудования, распределении ресурсов и координации между различными командами поддержки.
+private var eventResourcesAllocation : List<String> = listOf ()// Информация о транспортировке оборудования, распределении ресурсов и координации между различными командами поддержки.
 
 val eventTeams : Int = 0 // Количество команд
 
@@ -41,7 +38,7 @@ val eventTasks : List<String> = listOf("Task 1", "Task 2", "Task 3") // Пере
 
 val eventEvacuationPlan : String = "" // План эвакуации
 
-var availableEquipment : Map<String,Double> = mapOf(
+var availableEquipment : Map<String,Int> = mapOf(
     "Tables" to 10,
     "Chairs" to 50,
     "Laptops" to 25
@@ -53,9 +50,7 @@ var freeEquipment : Int = 95
         if (value > 0) field -=value
     }// Список свободного оборудования
 
-lateinit var mealShedule : Map<String,String> = mapOf(
-
-)// График питания участников (зависит от поставщика питания, определяемого за неделю до начала)
+var mealShedule : Map<String,String> = mapOf()// График питания участников (зависит от поставщика питания, определяемого за неделю до начала)
 
 val contingencyPlan : String = ""// План мероприятий на случай сбоев
 
@@ -65,7 +60,7 @@ val feedbackMethods : String = "Online surveys and interviews"// Методы и
 
 var privacyPolicy : String = ""// Политика конфиденциальности
 
-lateinit var privateFeedback : String = ""// Приватные отзывы (фидбэк) участников и зрителей для анализа проблем.
+var privateFeedback : String = ""// Приватные отзывы (фидбэк) участников и зрителей для анализа проблем.
 
 var currentTemperature : Double = 22.5 // Текущая температура в помещении
 
@@ -73,9 +68,7 @@ var networkPerformance : String = "Optimal"// Мониторинг и анали
 
 var lightingLavel : Int = 300// Уровень освещения
 
-lateinit var eventLog : List<String> = listOf(
-
-)// Лог событий мероприятия
+var eventLog : List<String> = listOf("one", "two")// Лог событий мероприятия
 
 val medicalAssistance : String = "Avalible on-site"// Доступность медицинской помощи
 
@@ -122,11 +115,13 @@ val emergencyContacts: Map<String, String> = mapOf(
 
 val specialConditions: String = "Wheelchair accessible venue" // Особые условия для участников с ограниченными возможностями
 
-val participantMood: String by lazy { '' } // Общее настроение участников (определяется опросами)
+val participantMood: String by lazy {
+    ""
+} // Общее настроение участников (определяется опросами)
 
-lateinit var hackathonPlan: String = "" // Подробный план хакатона, включающий время и содержание каждого сегмента, инициализируется непосредственно перед началом мероприятия.
+var hackathonPlan: String = "" // Подробный план хакатона, включающий время и содержание каждого сегмента, инициализируется непосредственно перед началом мероприятия.
 
-lsteinit var specialGuestName: String = "Special Guest" // Имя знаменитого специального гостя, которое будет объявлено за день до мероприятия.
+var specialGuestName: String = "Special Guest" // Имя знаменитого специального гостя, которое будет объявлено за день до мероприятия.
 
 val maxCapacity: Int = 250// Максимальное количество людей, которое может вместить место проведения.
 
