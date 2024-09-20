@@ -13,7 +13,7 @@ fun main () {
 
 fun printRes(sound: Double, knownKf: Double?) {
 
-val defaultKf: Double = 0.5
+var defaultKf: Double = 0.5
 
     println((knownKf ?: defaultKf) * sound)
 }
