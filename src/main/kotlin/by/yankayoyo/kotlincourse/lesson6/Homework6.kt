@@ -27,7 +27,7 @@ fun seasonsYear(mounth: Int):String {
 
     }
 
-fun petAge (age: Int): Double {
+fun petAge(age: Int): Double {
     return if (age in 0 .. 2 ){
         age * 10.5
     } else
