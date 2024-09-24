@@ -2,6 +2,7 @@ package by.yankayoyo.kotlincourse.lesson6
 fun main () {
 
     println(seasonsYear(4))
+    println(getSeason(11))
     println(petAge(5))
     println(transType(10.0))
     println(bonus(10500.0))
@@ -27,6 +28,16 @@ fun seasonsYear(mounth: Int):String {
 
     }
 
+fun getSeason(month: Int): String {
+    return when (month) {
+        !in 1..12 -> "Неверно указан месяц"
+        in 3..5 -> "Весна"
+        in 6..8 -> "Лето"
+        in 9..11 -> "Осень"
+        else -> "Зима"
+    }
+}
+
 fun petAge(age: Int): Double {
     return if (age in 0 .. 2 ){
         age * 10.5
@@ -38,7 +49,7 @@ fun petAge(age: Int): Double {
 fun transType(distance: Double): String {
     return if (distance < 1) {
         "Walk"
-    } else if (distance in 1.0..5.0){
+    } else if (distance <= 5.0) {
         "Bike"
     }else "Auto"
 
