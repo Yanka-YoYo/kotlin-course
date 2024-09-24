@@ -9,14 +9,15 @@ fun main () {
     println(docType("txt"))
     println(convertTemp(0,"F"))
     println(clothingWeather(25))
+    println(whichCloses(15))
     println(movie(22))
 
 }
 
 
-fun seasonsYear(mounth: Int):String {
+fun seasonsYear(month: Int):String {
 
-        return when (mounth) {
+        return when (month) {
 
             in 1..2 , 12 -> "Winter"
             in 3..5 -> "Spring"
@@ -85,12 +86,21 @@ fun convertTemp(value: Int, unit: String): String {
 
 fun clothingWeather(temperature: Int): String {
     return when(temperature) {
-        in -30..-1 -> "Warm jacket, hat, gloves"
+        in -30..-1 -> "Warm jacket, hat"
         in 0..14 -> "Light jacket"
         in 15..34 -> "T-Shirt, shorts"
         else -> "Stay at home"
     }
 
+}
+
+fun whichCloses(temperature: Int): String {
+    return when(temperature) {
+        in -30 until 0 -> "куртка и шапка"
+        in 0..15 -> "ветровка"
+        in 16..35 ->  "футболка и шорты"
+        else -> "не выходить из дома"
+    }
 }
 
 fun movie(age: Int): String {
