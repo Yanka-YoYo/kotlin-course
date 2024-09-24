@@ -62,9 +62,10 @@ for (i in 20 downTo 2) {
     var count = 1
     var sum = 0
     while ((count++) + count <= 10) {
-    sum = sum + count++
+        sum += count++
     }
     println(sum)
+
 }
 
 
