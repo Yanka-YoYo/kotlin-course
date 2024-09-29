@@ -67,22 +67,23 @@ fun main() {
     println(text.format(name, city, age, friendsCount, rating, balance))
 
     println(subString2)
-}
 
-fun convert(string: String): String {
-    return when {
-        string.startsWith("mistake", true) -> string.replace("mistake", "little mistake", true)
-        string.endsWith("warning", true) -> "$string ... not critical"
-        else -> ""
+
+    fun convert(string: String): String {
+        return when {
+            string.startsWith("mistake", true) -> string.replace("mistake", "little mistake", true)
+            string.endsWith("warning", true) -> "$string ... not critical"
+            else -> ""
+        }
+
+        println(convert("Для завершения проекта важно"))
+
+        var text1 = "Kotlin: The Fun Way to Learn Programming"
+        var text2 = "contact@example.com"
+        var indexOfAt = text2.indexOf("@")
+
+        var stringPhone = "123-456-7890"
+        val split = stringPhone.split("-")
+        println("XXX-XXX-${split[2]}")
     }
-
-    println(convert("Для завершения проекта важно"))
-
-var text1 = "Kotlin: The Fun Way to Learn Programming"
-    var text2 = "contact@example.com"
-    var indexOfAt = text2.indexOf("@")
-
-    var stringPhone = "123-456-7890"
-   val split = stringPhone.split("-")
-    println("XXX-XXX-${split[2]}")
 }
