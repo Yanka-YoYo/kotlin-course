@@ -35,15 +35,15 @@ fun convert(phrase: String): String{
 //Описание: У вас есть строка лога вида "Пользователь вошел в систему -> 2021-12-01 09:48:23". Извлеките отдельно дату и время из этой строки и сразу распечатай их по очереди.
 
 fun dateTime(login: String) {
-    val t = login.split(" ")
-    return println("${t[5]}\n${t[6]}")
+    val time = login.split(" ")
+    return println("${time[5]}\n${time[6]}")
 }
 
 //Задание 2: Маскирование Личных Данных
 //Описание: Дана строка с номером кредитной карты "4539 1488 0343 6467". Замаскируйте все цифры, кроме последних четырех, символами "*".
 fun creditCard(number: String) {
-    val splitNumber = number.split(" ")
-    return println("**** **** **** ${splitNumber[3]}")
+    val secretNumber = number.split(" ")
+    return println("**** **** **** ${secretNumber[3]}")
 }
 
 //Задание 3: Форматирование Адреса Электронной Почты. Используй replace
@@ -56,17 +56,17 @@ fun emailFormat(email: String) {
 //Задание 4: Извлечение Имени Файла из Пути
 //Описание: Дан путь к файлу "C:/Пользователи/Документы/report.txt". Извлеките название файла с расширением.
 fun filePath(path: String){
-    val splitPath = path.split("/")
-    return println(splitPath.last())
+    val namePath = path.split("/")
+    return println(namePath.last())
 }
 
 //Задание 5: Создание Аббревиатуры из Фразы. Используй split с набором символов для разделения. Используй for для перебора слов. Используй var переменную для накопления первых букв.
 //Описание: У вас есть фраза, например "Объектно-ориентированное программирование". Создайте аббревиатуру из начальных букв слов (например, "ООП").
 fun shortFormat(phrase1: String): String {
-    val abbrList = phrase1.split(' ', '-')
-    var abbrPhrase = ""
-    for (j in abbrList.indices) { //for (i in 0 until abbrList.length)
-        abbrPhrase += (abbrList[j][0].uppercase())
+    val shortList = phrase1.split(' ', '-')
+    var shortPhrase = ""
+    for (j in shortList.indices) { //for (i in 0 until abbrList.length)
+        shortPhrase += (shortList[j][0].uppercase())
     }
-    return abbrPhrase
+    return shortPhrase
 }
