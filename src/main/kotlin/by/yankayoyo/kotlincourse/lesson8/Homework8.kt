@@ -18,6 +18,7 @@ fun main () {
     println(filePath("C:/Пользователи/Документы/report.txt"))
     println(message = "Task 5")
     println(shortFormat("Объектно-ориентированное программирование"))
+    println(multiplyTable(1, 9))
 
 }
 
@@ -69,4 +70,32 @@ fun shortFormat(phrase1: String): String {
         shortPhrase += (shortList[j][0].uppercase())
     }
     return shortPhrase
+}
+
+fun multiplyTable(first: Int, second: Int) {
+    val formatLength = (first * second).toString().length + 1
+    print(" ".repeat(formatLength))
+
+    val xRange = getRange(first)
+    val yRange = getRange(second)
+    val formatter = "%${formatLength}s"
+    for (i in xRange) {
+        print(formatter.format("$i"))
+    }
+    println()
+    for (i in yRange) {
+        print(formatter.format("$i"))
+        for (j in xRange) {
+            print(formatter.format("${i * j}"))
+        }
+        println()
+    }
+}
+
+private fun getRange(size: Int): IntProgression {
+    return when {
+        size > 0 -> 1..size
+        size < 0 -> -1 downTo size
+        else -> throw IllegalArgumentException("Неверное значение size")
+    }
 }
