@@ -11,10 +11,8 @@ fun main() {
     val today = LocalDate.now()
 
     if (today == dateBirthday) {
-
             val fullMessage = "Дорогой $name, $message $emojiPack"
             println(fullMessage)
-
     } else {
         println("Сегодня не день рождения.")
     }
