@@ -55,8 +55,8 @@ fun main() {
 //    Задание 7: Разница Двух Массивов
 //    Создайте два массива целых чисел одинаковой длины. Создайте третий массив, вычев значения одного из другого.
 
-    val firstArray = arrayListOf(10, 20, 30, 40)
-    val secondArray = arrayListOf(50, 60, 70, 80)
+    val firstArray = arrayOf(10, 20, 30, 40)
+    val secondArray = arrayOf(50, 60, 70, 80)
     val emptyFourArray = Array(4) { 0 }
     for (i in emptyFourArray.indices) {
         emptyFourArray[i] = firstArray[i] - secondArray[i]
@@ -67,11 +67,11 @@ fun main() {
 //    Задание 8: Поиск Индекса Элемента
 //    Создайте массив целых чисел. Найдите индекс элемента со значением 5. Если значения 5 нет в массиве, возвращаем -1. Реши задачу через цикл while.
 
-    val searchArray = arrayListOf(1, 2, 3, 4, 5, 6)
+    val searchArray = arrayOf(1, 2, 3, 4, 5, 6)
     var index = -1
     var i = 0
-    while (i < searchArray.size){
-        if (searchArray[i] == 7){
+    while (i < searchArray.size) {
+        if (searchArray[i] == 7) {
             index = i
             break
         }
@@ -82,9 +82,9 @@ fun main() {
 //    Задание 9: Перебор Массива
 //    Создайте массив целых чисел. Используйте цикл для перебора массива и вывода каждого элемента в консоль. Напротив каждого элемента должно быть написано “чётное” или “нечётное”.
 
-    val array9 = intArrayOf(1, 2, 3, 4, 5)
-    for (element in array9) {
-        val type = if (element % 2 == 0) "чётное" else "нечётное"
+    val arrayOddEven = intArrayOf(1, 2, 3, 4, 5)
+    for (element in arrayOddEven) {
+        val type = if (element % 2 == 0) "Odd" else "Even"
         println("$element - $type")
     }
 
@@ -104,6 +104,17 @@ fun main() {
     val array10 = arrayOf("apple", "banana", "cherry")
     val result = findSubstring(array10, "ban")
     println(result)
+
+//    Задание 1: Создание Пустого Списка
+//    Создайте пустой неизменяемый список целых чисел.
+
+    val emptyList: List<Int> = listOf()
+
+//    Задание 2: Создание и Инициализация Списка
+//    Создайте неизменяемый список строк, содержащий три элемента (например, "Hello", "World", "Kotlin").
+
+    val mutableList: List<String> = listOf("Hello", "World", "Kotlin")
+
 
 
 }
