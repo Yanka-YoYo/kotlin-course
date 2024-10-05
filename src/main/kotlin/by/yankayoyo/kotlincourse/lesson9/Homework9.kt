@@ -14,6 +14,6 @@ fun main() {
             val fullMessage = "Дорогой $name, $message $emojiPack"
             println(fullMessage)
     } else {
-        println("Сегодня не день рождения.")
+        println("К сожалению, сегодня не твой день рождения.")
     }
 }
