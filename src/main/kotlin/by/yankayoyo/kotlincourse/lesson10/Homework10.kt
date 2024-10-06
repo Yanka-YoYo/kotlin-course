@@ -290,9 +290,49 @@ fun main() {
 //    Задание 9: Нахождение Пересечения Множеств
 //    Создайте два множества целых чисел и найдите их пересечение (общие элементы). Реши задачу через вложенные циклы.
 
+    val setA: Set<Int> = setOf(1, 2, 3, 4)
+    val setB: Set<Int> = setOf(3, 4, 5, 6)
+    val intersectionSet: MutableSet<Int> = mutableSetOf()
+    for (itemA in setA) {
+        for (itemB in setB) {
+            if (itemA == itemB) {
+                intersectionSet.add(itemA)
+            }
+        }
+    }
 
+    println(intersectionSet)
 
+//    Задание 10: Нахождение Разности Множеств
+//    Создайте два множества строк и найдите разность первого множества относительно второго (элементы, присутствующие в первом множестве, но отсутствующие во втором). Реши задачу через вложенные циклы и переменные флаги.
 
+    val setX: Set<String> = setOf("Kotlin", "Java", "Scala")
+    val setY: Set<String> = setOf("Java", "Go")
+    val differenceSet: MutableSet<String> = mutableSetOf()
+    for (itemX in setX) {
+        var found = false
+        for (itemY in setY) {
+            if (itemX == itemY) {
+                found = true
+                break
+            }
+        }
+        if (!found) {
+            differenceSet.add(itemX)
+        }
+    }
 
+    println(differenceSet)
+
+//    Задание 11: Конвертация Множества в Список
+//    Создайте множество строк и конвертируйте его в список с использованием цикла.
+
+    val stringSetToConvert: Set<String> = setOf("Kotlin", "is", "cool")
+    val convertedList: MutableList<String> = mutableListOf()
+    for (item in stringSetToConvert) {
+        convertedList.add(item)
+    }
+
+println(convertedList)
 
 }
