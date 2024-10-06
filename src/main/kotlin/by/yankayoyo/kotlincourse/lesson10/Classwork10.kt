@@ -95,13 +95,18 @@ fun main() {
     }
     println(emptySet3)
 
+    fun finderNumber (setNum: Set<Int>, num: Int): Boolean {
+        for (cub in setNum) {
+            if (cub == num) {
+                return true
+            }
+        }
+        return false
+    }
+
 }
 
-//fun finderNumber (setNum: Set<Int>, num: Int): Boolean {
-//    for (cub in setNum){
-//        if (cub==num){
-//            return true
-//        }
-//        return false
-//    }
-//}
+
+
+
+
