@@ -12,7 +12,7 @@ fun main() {
 //    Задание 2: Создание Пустого Массива
 //    Создайте пустой массив строк размером 10 элементов.
 
-    val emptyArray = Array(10) { 0 }
+    val emptyArray: Array<String> = Array(10) { "a" }
 
     println(emptyArray)
 
@@ -29,9 +29,9 @@ fun main() {
 //    Задание 4: Изменение Элементов Массива
 //    Создайте массив из 5 элементов типа Int. Используйте цикл, чтобы присвоить каждому элементу значение, равное его индексу, умноженному на 3.
 
-    val emptyArrayThree = Array(5) { "" }
+    val emptyArrayThree = Array(5) { 0 }
     for (three in emptyArrayThree.indices) {
-        emptyArrayThree[three] = (three * 3).toString()
+        emptyArrayThree[three] = (three * 3)
         for (element in emptyArrayThree) {
 
             println(element)
@@ -75,18 +75,26 @@ fun main() {
 //    Задание 8: Поиск Индекса Элемента
 //    Создайте массив целых чисел. Найдите индекс элемента со значением 5. Если значения 5 нет в массиве, возвращаем -1. Реши задачу через цикл while.
 
-    val searchArray = arrayOf(1, 2, 3, 4, 5, 6)
-    var index = -1
-    var i = 0
-    while (i < searchArray.size) {
-        if (searchArray[i] == 7) {
-            index = i
-            break
+    val arraySearch = arrayOf(1, 2, 3, 4, 6, 0, 5)
+    var index = arraySearch.lastIndex
+    var search5 = false
+
+    while (index > 0) {
+        when (arraySearch[index]) {
+            5 -> {
+                print("$index ")
+                index--
+                search5 = true
+            }
+            else -> index--
         }
-        i++
     }
 
-    println(searchArray.toList())
+    if (!search5) {
+        print(-1)
+    }
+
+println()
 
 //    Задание 9: Перебор Массива
 //    Создайте массив целых чисел. Используйте цикл для перебора массива и вывода каждого элемента в консоль. Напротив каждого элемента должно быть написано “чётное” или “нечётное”.
@@ -263,10 +271,8 @@ fun main() {
 //    Создай функцию, которая принимает множество строк (set) и строку и проверяет, есть ли в множестве указанная строка. Нужно вернуть булево значение true если строка есть. Реши задачу через цикл.
 
     fun finderElement (set: Set<String>, element: String): Boolean {
-        for (item in set){
-            if (item == element){
-                return true
-            }
+        for (item in set) {
+            if (item == element) return true
         }
         return false
     }
