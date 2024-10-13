@@ -113,40 +113,62 @@ fun processList(k: List<String>) {
 //
 //Сначала сделай запуск функции и посмотри на результат её работы. Сделай запуск после рефакторинга и проверь, чтобы результат работы был аналогичным.
 //
-fun drawRectangle(width: Int, height: Int) {
-    refactoring(width, "width")
-    refactoring(height, "height")
-
-
-    // Верхняя граница
-    var topLine = "+"
-    for (i in 1 until width - 1) {
-        topLine += "-"
-    }
-    topLine += "+\n"
-    print(topLine)
-
-    // Боковые границы
-    for (i in 1 until height - 1) {
-        var middleLine = "|"
-        for (j in 1 until width - 1) {
-            middleLine += " "
-        }
-        middleLine += "|\n"
-        print(middleLine)
-    }
-
-    // Нижняя граница
-    var bottomLine = "+"
-    for (i in 1 until width - 1) {
-        bottomLine += "-"
-    }
-    bottomLine += "+\n"
-    print(bottomLine)
+private fun refactory(size: Int, arg: String) {
+    if (size <= 0) throw IllegalArgumentException("$arg должно быть положительным и больше нуля")
 }
 
-fun refactoring(xW: Int, xH: String) {
-    if (xW <= 0) throw IllegalArgumentException("width должно быть положительным и больше нуля")
+private fun lines(vert: Int, hor: Int,  horizontal: Boolean) {
+    if (horizontal) {
+        for (i in 1 until hor - 1) {
+            var middleLine = "|"
+            for (j in 1 until vert - 1) {
+                middleLine += " "
+            }
+            middleLine += "|\n"
+            print(middleLine)
+        }
+    }
+    var line = "+"
+    for (i in 1 until vert - 1) {
+        line += "-"
+    }
+    line += "+\n"
+    print(line)
+}
+
+fun drawRectangle(width: Int, height: Int) {
+//    if (width <= 0) throw IllegalArgumentException("width должно быть положительным и больше нуля")
+//    if (height <= 0) throw IllegalArgumentException("height должно быть положительным и больше нуля")
+    refactory(width, "width")
+    refactory(height, "height")
+
+    // Верхняя граница
+//    var topLine = "+"
+//    for (i in 1 until width - 1) {
+//        topLine += "-"
+//    }
+//    topLine += "+\n"
+//    print(topLine)
+    lines(width, height,false)
+
+    // Боковые границы
+//    for (i in 1 until height - 1) {
+//        var middleLine = "|"
+//        for (j in 1 until width - 1) {
+//            middleLine += " "
+//        }
+//        middleLine += "|\n"
+//        print(middleLine)
+//    }
+    lines(width, height,true)
+
+    // Нижняя граница
+//    var bottomLine = "+"
+//    for (i in 1 until width - 1) {
+//        bottomLine += "-"
+//    }
+//    bottomLine += "+\n"
+//    print(bottomLine)
 }
 
 //
