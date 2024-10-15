@@ -66,9 +66,7 @@ fun doNullableBoolean(f: String?, g: Int?): Boolean? {
 //Задача 1:
 //Напишите функцию multiplyByTwo, которая принимает целое число и возвращает его, умноженное на 2.
 
-fun myltiplyByTwo(h: Int): Int {
-    return h * 2
-}
+fun myltiplyByTwo(h: Int) = h * 2
 
 //Задача 2:
 //Создайте функцию isEven, которая принимает целое число и возвращает true, если число чётное, и false в противном случае.
